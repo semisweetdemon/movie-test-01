@@ -1,0 +1,116 @@
+header {
+	background-color: $color__one;
+	position: relative;
+
+	.header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		&__logo {
+			img {
+				height: 50px;
+			}
+		}
+
+		nav {
+			display: flex;
+			align-items: center;
+			gap: 30px;
+			a {
+				color: $color__three;
+				position: relative;
+				transition: $tt;
+
+				&::after {
+					position: absolute;
+					content: '';
+					bottom: 0;
+					left: 5px;
+					width: 0;
+					height: 1px;
+					background-color: $color__three;
+					transition: $tt;
+				}
+
+				&::before {
+					position: absolute;
+					content: '';
+					top: 0;
+					right: -5px;
+					width: 1px;
+					height: 0;
+					background-color: $color__three;
+					transition: $tt;
+				}
+
+				&:hover {
+					&::after {
+						width: 100%;
+					}
+					&::before {
+						height: 100%;
+					}
+				}
+			}
+			.active {
+				&::after {
+					width: 100%;
+					left: 0;
+				}
+				&:hover {
+					&::after {
+						left: 5px;
+					}
+				}
+			}
+		}
+
+		&__search {
+			display: flex;
+			align-items: center;
+			gap: 20px;
+
+			input,
+			button {
+				background: transparent;
+				border: none;
+				outline: none;
+				color: $color__three;
+			}
+
+			input {
+				padding: 5px 10px;
+				outline: 1px solid $color__three;
+				transition: $tt;
+
+				&::placeholder {
+					color: $color__three;
+				}
+
+				&:focus {
+					box-shadow: 5px 5px $color__three;
+				}
+			}
+
+			button {
+				padding: 5px 30px;
+				outline: 1px solid $color__three;
+
+				&:hover {
+					box-shadow: 5px 5px $color__three;
+				}
+			}
+		}
+	}
+
+	.header__searchdiv {
+		position: absolute;
+		right: 477px;
+		top: 64px;
+		width: 200px;
+		height: 200px;
+		background-color: $color__two;
+		transition: $tt;
+	}
+}

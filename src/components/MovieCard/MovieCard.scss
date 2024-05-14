@@ -1,0 +1,40 @@
+.cards {
+	display: grid;
+	grid-template-columns: repeat(4, 24%);
+	grid-template-rows: repeat(auto);
+	flex-wrap: wrap;
+	justify-content: space-between;
+	row-gap: 30px;
+
+	.card {
+		transition: $tt;
+		cursor: pointer;
+
+		&__image {
+			width: 100%;
+			height: 400px;
+			img {
+				width: 100%;
+				height: 400px;
+				object-fit: cover;
+			}
+		}
+
+		&__text {
+			padding: 10px;
+			border: 1px solid $color__one;
+			border-top: none;
+
+			h3 {
+				height: 50px;
+				color: $color__one;
+				margin-bottom: 5px;
+				text-align: center;
+			}
+		}
+
+		&:hover {
+			box-shadow: 5px 5px $color__one;
+		}
+	}
+}

@@ -1,0 +1,73 @@
+$color__one: rgb(92, 92, 233);
+$color__two: rgb(28, 28, 34);
+$color__three: white;
+$tt: 0.5s;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.container {
+	max-width: 1240px;
+	width: 100%;
+	padding: 20px;
+	margin: 0 auto;
+}
+
+a {
+	text-decoration: none;
+}
+
+body {
+	font-family: 'Bebas Neue', sans-serif;
+	letter-spacing: 1px;
+	word-spacing: 2px;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+.prevnext__buttons {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 20px 0;
+
+	.numbers {
+		display: flex;
+		gap: 10px;
+
+		button {
+			padding: 10px 20px;
+		}
+	}
+
+	button {
+		border: none;
+		background: transparent;
+		outline: 1px solid $color__two;
+		padding: 10px 40px;
+		color: $color__two;
+
+		&:hover {
+			box-shadow: 5px 5px $color__one;
+		}
+	}
+}
+
+button {
+	cursor: pointer;
+	color: $color__two;
+	transition: $tt;
+	background: transparent;
+}
+
+.search {
+	h3 {
+		text-align: center;
+		margin-top: 300px;
+	}
+}
